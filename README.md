@@ -1,6 +1,18 @@
 Followings are the instructions for accessing the web app on Amazon AWS (Lightsail) 
 
 
-- IP address and SSH port for the server:  52.59.210.66
-- URL of the web application 
+- IP address and SSH port for the server:  54.93.241.240,  SSH port 2200 
+- URL of the web application:  54.93.241.240/app/
 - Installed software / third-party resources 
+
+  - Apache2 
+  - PostgreSQL 
+  
+  - flask
+  - sqlalchemy
+  - authlib
+  - google.oauth2
+  - googleapiclient 
+  - oauth2client
+  - httplib2 
+  

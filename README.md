@@ -1,8 +1,10 @@
 Followings are the instructions for accessing the flask app on Apache2 server on Amazon AWS (Lightsail) 
 
 
-- IP address and SSH port for the server:  54.93.241.240,  SSH port 2200 
-- URL of the web application:  54.93.241.240/app/
+- IP address and SSH port for the server:  54.93.241.240,  SSH port 2200     
+
+- URL of the web application:  54.93.241.240.xip.io   (using xip.io becaues Google AOuth does not allow number-only url) 
+
 - Installed software / third-party resources 
 
   - Apache2 

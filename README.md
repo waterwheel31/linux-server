@@ -1,4 +1,6 @@
-Linux Server Practice
+#Linux Server Practice
+<hr>
+
 
 This is a practice to launch a web app on a Linux server on a Cloud. 
 
@@ -16,7 +18,7 @@ SSH login
 - To access, it is required to have a user name and secret key, that are provided by me
 
 
-Web cccess
+Web acccess
 - URL of the web application:  54.93.241.240.xip.io   (using xip.io becaues Google AOuth does not allow number-only url) 
 - By accessing that address from your browser, you can see the website
 

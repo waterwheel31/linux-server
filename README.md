@@ -40,20 +40,52 @@ This is a practice to launch a web app on a Linux server on a Cloud.
 <p> - create a key for the user by running following on local machine: "ssh-keygen -f ~/.ssh/grader.rsa", make its permission to 700
 <p> - copy public key on SSH's /home/grader/.ssh/
   
-<h3> Configureing firewall </h3> 
+<h3> Configureing firewall and profibiting root access </h3> 
 <p> - sudo uwf allow 2200/tcp
 <p> - sudo uwf allow 123/udp
 <p> - sudo uwf deny 20/tcp
 <p> - sudo uwf enable 
+<p> - edit /etc/ssh/sshd_config,   change "PermitRootLogin" to "no" 
 
-<h3> Package settings </h3> 
+<h3> Package installing </h3> 
 <p> - updating apt-get installer: "sudo apt-get update" and "sudo apt-get upgrade" on SSH
 <p> - sudo apt-get install apache2   
 <p> - sudo apt-get install libapache2-mod-wsgi python-dev
+<p> - sudo apt-get install libpq-dev python-dev
+<p> - sudo apt-get install postgresql postgresql-contrib
 <p> - sudo apt-get install python3-pip 
 <p> - sudo pip3 install virtualenv 
-<p> - "sudo virtualenv venv",  and then "source venv/bin/activate" to create virtual environment 
+<p> - "sudo virtualenv venv", at "/var/www/html/"  and then "source venv/bin/activate" to create virtual environment 
+<p> - installing Python packages with "pip3 install". The pakcages include: Flask, sqlalchemy, Google
+  
+<h3> App settings </h3> 
+<p> - copy the all files and folders of the app on Lightsail, under /var/www/html/venv/
+<p> - change the main python file's name to be "__init__.py"  
+<p> - change wsgi file at /etc/apache2/sites-available/000-default.conf, to add following lines
+<p> DocumentRoot /var/www/html/venv/fullstackcatalog/        
+<p> WSGIScriptAlias / /var/www/html/venv/fullstackcatalog/project.wsgi   -> this redirects server's root to the web app
+<p> - create "project.wsgi" under the app foler (/var/www/html/venv/fullstackcatalog/), and the contents are as following:
 
+#!/usr/bin/python
+import sys
+import logging
+
+logging.basicConfig(stream=sys.stderr)
+sys.path.insert(0,"/var/www/html/venv/")
+sys.path.append("/var/wwww/html/venv/lib/python3.5/site-packages")
+sys.path.append("/fullstackcatalog")
+
+from fullstackcatalog import app as application
+application.secret_key = (SECRET) 
+
+<h3> Database settings </h3> 
+<p> login PostgreSQL by run "sudo postgres", and then "psql"
+<p> create data base by "CREATE USER ubuntu WITH PASSWORD (pass)" and "CREATE DATABASE catalog WITH OWNER ubuntu" 
+<p> change the database setting in __init__.py and database_setup.py as  "engine = create_engine('postgresql://ubuntu:(pass)@catalog')"
+<p> run "python3 set_database.py" to create tables 
+
+<h3> Restart Apache server </h3>
+<p> restart apache server by "sudo service apache2 restart", and access to 54.93.241.240.xip.io
 
 <h2>References</h2>
 <p> - this site helped a lot during the setting https://www.digitalocean.com/community/tutorials/how-to-deploy-a-flask-application-on-an-ubuntu-vps  

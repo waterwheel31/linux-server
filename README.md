@@ -43,12 +43,21 @@ This is a practice to launch a web app on a Linux server on a Cloud.
 <h3> Configureing firewall </h3> 
 <p> - sudo uwf allow 2200/tcp
 <p> - sudo uwf allow 123/udp
-<p> - sudo uwf disable 20/tcp
+<p> - sudo uwf deny 20/tcp
 <p> - sudo uwf enable 
 
+<h3> Package settings </h3> 
+<p> - updating apt-get installer: "sudo apt-get update" and "sudo apt-get upgrade" on SSH
+<p> - sudo apt-get install apache2   
+<p> - sudo apt-get install libapache2-mod-wsgi python-dev
+<p> - sudo apt-get install python3-pip 
+<p> - sudo pip3 install virtualenv 
+<p> - "sudo virtualenv venv",  and then "source venv/bin/activate" to create virtual environment 
+
+
 <h2>References</h2>
-<p> - XX
-<p> - XX
+<p> - this site helped a lot during the setting https://www.digitalocean.com/community/tutorials/how-to-deploy-a-flask-application-on-an-ubuntu-vps  
+
 
 
 

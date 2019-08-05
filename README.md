@@ -20,15 +20,17 @@ Web cccess
 - URL of the web application:  54.93.241.240.xip.io   (using xip.io becaues Google AOuth does not allow number-only url) 
 - By accessing that address from your browser, you can see the website
 
-Setup steps
--
--
--
+
+Set up steps
+- XX
+- XX
 
 References
--
--
--
+- XX
+- XX
+
+
+
 
 
 

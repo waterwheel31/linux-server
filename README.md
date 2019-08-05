@@ -6,8 +6,8 @@ This is a practice to launch a web app on a Linux server on a Cloud.
 
 
 <h2>Used software/services </h2>
-- Flask for backend web application
-- PostgreSQL for the database 
+<p> Flask for backend web application
+<p> PostgreSQL for the database 
 - sqlalchemy to access to the database
 - Google OAuth for thrid party authentification
 - Apache2 for webserver

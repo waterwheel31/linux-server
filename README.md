@@ -27,8 +27,12 @@ This is a practice to launch a web app on a Linux server on a Cloud.
 
 
 <h2>Set up steps</h2>
-<p> - setting up was done in following steps
-<p> - XX
+<p> setting up was done in following steps
+<p> - set up and launch Lightsail server on AWS webiste, also download a default secret key 
+<p> - save the default secret key in local machine, in a folder like ~/.ssh/secretkey.pem
+<p> - connect via ssh from terminal, with a command "ssh -i ~/.ssh/secretkey.pem ubuntu@54.93.241.240 -p 20" (20 is the default SSH port) 
+<p> - 
+<p> - update pakcage by running "sudo apt-get update" and "sudo apt-get upgrade", and "
 
 <h2>References</h2>
 <p> - XX

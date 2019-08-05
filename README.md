@@ -17,7 +17,7 @@ This is a practice to launch a web app on a Linux server on a Cloud.
 <h2>SSH login</h2> 
 <p> - IP address and SSH port for the server:  54.93.241.240,  SSH port 2200     
 <p> - To access, it is required to have a user name and secret key, that are provided by me
-<p> - The shell command is as following =>  "ssh -i <secret key> <username>@54.93.241.240 -p 2200" 
+<p> - The shell command is as following =>  "ssh -i SECRETKEY_FILE_PATH USERNAME@54.93.241.240 -p 2200" 
 <p> - Sometimes the server is stopped to save the cost. In that case, please contact to me
 
 

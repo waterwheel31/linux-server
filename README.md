@@ -1,7 +1,7 @@
 <h1> Linux Server Practice </h1>
 
 This is a practice to launch a web app on a Linux server on a Cloud. 
-
+(the final project for Udacity Full Stack Web Developer Nanodegree) 
 
 
 
@@ -27,12 +27,24 @@ This is a practice to launch a web app on a Linux server on a Cloud.
 
 
 <h2>Set up steps</h2>
-<p> setting up was done in following steps
+<p> setting up was done roughly in following steps
+<p> SERVER LAUNCH
 <p> - set up and launch Lightsail server on AWS webiste, also download a default secret key 
 <p> - save the default secret key in local machine, in a folder like ~/.ssh/secretkey.pem
-<p> - connect via ssh from terminal, with a command "ssh -i ~/.ssh/secretkey.pem ubuntu@54.93.241.240 -p 20" (20 is the default SSH port) 
-<p> - 
-<p> - update pakcage by running "sudo apt-get update" and "sudo apt-get upgrade", and "
+<p> - change the permission of the file  "chmod 700 ~/.ssh/secretkey.pem 
+<p> - connect via ssh from terminal, with a command: "ssh -i ~/.ssh/secretkey.pem ubuntu@54.93.241.240 -p 20" (20 is the default SSH port) 
+  
+<p> ADDING A NEW USER
+<p> - add another user, "grader", with following command: "sudo adduser grader" 
+<p> - create a file "/etc/sudoers.d/grader" on SSH, and write "grader ALL=(ALL:ALL) ALL" 
+<p> - create a key for the user by running following on local machine: "ssh-keygen -f ~/.ssh/grader.rsa", make its permission to 700
+<p> - copy public key on SSH's /home/grader/.ssh/
+  
+<p> CONFIGURING FIREWALL
+<p> - sudo uwf allow 2200/tcp
+<p> - sudo uwf allow 123/udp
+<p> - sudo uwf disable 20/tcp
+<p> - sudo uwf enable 
 
 <h2>References</h2>
 <p> - XX

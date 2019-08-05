@@ -27,7 +27,7 @@ This is a practice to launch a web app on a Linux server on a Cloud.
 
 
 <h2>Set up steps</h2>
-<p> - XX
+<p> - setting up was done in following steps
 <p> - XX
 
 <h2>References</h2>

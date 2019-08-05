@@ -28,19 +28,19 @@ This is a practice to launch a web app on a Linux server on a Cloud.
 
 <h2>Set up steps</h2>
 <p> setting up was done roughly in following steps
-<p> SERVER LAUNCH
+<h3> Server launch </h3>
 <p> - set up and launch Lightsail server on AWS webiste, also download a default secret key 
 <p> - save the default secret key in local machine, in a folder like ~/.ssh/secretkey.pem
 <p> - change the permission of the file  "chmod 700 ~/.ssh/secretkey.pem 
 <p> - connect via ssh from terminal, with a command: "ssh -i ~/.ssh/secretkey.pem ubuntu@54.93.241.240 -p 20" (20 is the default SSH port) 
   
-<p> ADDING A NEW USER
+<h3> Adding a user </h3>
 <p> - add another user, "grader", with following command: "sudo adduser grader" 
 <p> - create a file "/etc/sudoers.d/grader" on SSH, and write "grader ALL=(ALL:ALL) ALL" 
 <p> - create a key for the user by running following on local machine: "ssh-keygen -f ~/.ssh/grader.rsa", make its permission to 700
 <p> - copy public key on SSH's /home/grader/.ssh/
   
-<p> CONFIGURING FIREWALL
+<h3> Configureing firewall </h3> 
 <p> - sudo uwf allow 2200/tcp
 <p> - sudo uwf allow 123/udp
 <p> - sudo uwf disable 20/tcp

@@ -22,7 +22,7 @@ This is a practice to launch a web app on a Linux server on a Cloud.
 
 
 <h2>Web acccess</h2>
-<p> - URL of the web application:  <a href="54.93.241.240.xip.io">54.93.241.240.xip.io </a>   (using xip.io becaues Google AOuth does not allow number-only url) 
+<p> - URL of the web application:  <a href="http://54.93.241.240.xip.io">54.93.241.240.xip.io</a>   (using xip.io becaues Google AOuth does not allow number-only url) 
 <p> - By accessing that address from your browser, you can see the website
 
 
